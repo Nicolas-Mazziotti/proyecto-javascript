@@ -1,20 +1,4 @@
-// const productos = [
-//     {id: 1, modelo: "Xiaomi RedMiLite", precio: 250, img:"http://127.0.0.1:5501/img/xiaomi-11Lite-128GB.png"},
-//     {id: 2, modelo: "Xiaomi RedMiLite", precio: 300},
-//     {id: 3, modelo: "Xiaomi RedMiLite", precio: 375}
-// ];
 
-// for (const producto of productos){
-//     let contenedor = document.createElement("div");
-
-//     contenedor.innerHTML= `
-//     <p> ID: ${producto.id} </p>
-//     <b> Modelo: ${producto.modelo} </b>
-//     <p> Precio: ${producto.precio}</p>
-//     `;
-
-//     document.body.appendChild (contenedor);
-// }
 class Producto {
     constructor(modelo, precio, stock, imagen){
         this.modelo = modelo.toUpperCase();
