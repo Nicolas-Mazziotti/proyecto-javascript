@@ -6,19 +6,13 @@
           box-sizing: border-box;
 }
 
-body {
-  background-color: black;
-}
-
-/* NAV BAR */
-/*HERO SECTION*/
-#container_hero {
+#container-hero {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-#container_hero_img {
+#container-hero-img {
   background-image: url(/img/hero_section.jpg);
   background-size: cover;
   height: 80vh;
@@ -26,17 +20,56 @@ body {
   margin: 0;
 }
 
-#container_hero_img h1 {
+.container-hero-titulo {
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 'Poppins';
+}
+
+.contenedor-tienda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem;
+}
+
+.nombre-modelo {
   text-align: center;
-  color: white;
-  padding: 4rem;
+  font-size: 20px;
   font-family: 'Roboto';
-  font-weight: bold;
+}
+
+.imagen-card {
+  height: 300px;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.btn-carrito {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
