@@ -13,7 +13,7 @@
 }
 
 #container-hero-img {
-  background-image: url(/img/hero_section.jpg);
+  background-image: url(../img/hero_section.jpg);
   background-size: cover;
   height: 80vh;
   width: 100%;
@@ -37,7 +37,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
 .card {
@@ -45,6 +46,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 2rem;
+  padding: 0;
 }
 
 .nombre-modelo {
