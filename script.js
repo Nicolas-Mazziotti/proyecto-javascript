@@ -1,8 +1,8 @@
 const productos = [
-    {id:1, modelo: "Xiaomi 11 Lite", precio: 350, img :"/img/mi-lite.png"},
-    {id:2, modelo: "Xiaomi RedMi Note 10 Pro", precio: 300, img :"/img/redmi-note10.png"},
-    {id:3, modelo: "Xiaomi PocoPhone F3", precio: 280, img :"/img/poco-f3.png"},
-    {id:4, modelo: "Xiaomi RedMi Note 9T", precio: 350, img :"/img/redmi-note9t.png"},
+    {id:1, modelo: "Xiaomi 11 Lite", precio: 350, img :"./img/mi-lite.png"},
+    {id:2, modelo: "Xiaomi RedMi Note 10 Pro", precio: 300, img :"./img/redmi-note10.png"},
+    {id:3, modelo: "Xiaomi PocoPhone F3", precio: 280, img :"./img/poco-f3.png"},
+    {id:4, modelo: "Xiaomi RedMi Note 9T", precio: 350, img :"./img/redmi-note9t.png"},
 ];
 
 //Guardo los productos en un array
@@ -10,14 +10,20 @@ let carrito = [];
 
 //Sincronizo a la class del html
 const contenedorTienda = document.querySelector(".contenedor-tienda");
+//saco porque use jQuery en #contenedor-carrito
 // const contenedorCarrito = document.querySelector("#contenedor-carrito");
 const carritoHtml = document.querySelector(".carrito");
 const totalProductos = document.getElementById('totalProductos')
 
 
 
-document.addEventListener("DOMContentLoaded", () =>{
-        mostrarProductos ()
+// document.addEventListener("DOMContentLoaded", () =>{
+//         mostrarProductos ()
+// })
+
+//uso jquery para preparar el DOM
+$(document).ready(function(){
+    mostrarProductos()
 })
 
 function mostrarProductos () {
@@ -107,7 +113,7 @@ function mostrarCarrito(array){
         // Creo boton eliminar
        let btnEliminar = document.getElementById(`${producto.id}`)
 
-        btnEliminar.addEventListener('click', ()=>{
+            btnEliminar.addEventListener('click', ()=>{
             console.log(producto.id)
             btnEliminar.parentElement.remove()
             carrito = carrito.filter(el => el.id != producto.id)
