@@ -1,0 +1,6 @@
+[
+    {"id":1, "modelo": "Xiaomi Mi Band Smartwatch", "precio": 350, "img" :"./img/smart-watch.png"},
+    {"id":1, "modelo": "Xiaomi Redmi Airdots", "precio": 350, "img" :"./img/airpods.png"},
+    {"id":1, "modelo": "Xiaomi Mi Robot Vacuum", "precio": 350, "img" :"./img/mi-robot.png"},
+    {"id":1, "modelo": "Xiaomi Scooter Electrico", "precio": 350, "img" :"./img/scooter.png"}
+]

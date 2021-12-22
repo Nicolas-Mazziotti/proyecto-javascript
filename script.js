@@ -3,6 +3,8 @@ const productos = [
     {id:2, modelo: "Xiaomi RedMi Note 10 Pro", precio: 300, img :"./img/redmi-note10.png"},
     {id:3, modelo: "Xiaomi PocoPhone F3", precio: 280, img :"./img/poco-f3.png"},
     {id:4, modelo: "Xiaomi RedMi Note 9T", precio: 350, img :"./img/redmi-note9t.png"},
+    {id:5, modelo: "Xiaomi RedMi Note 10S Dual", precio: 220, img :"./img/redmi-note10s.png"},
+    {id:6, modelo: "Xiaomi Black Shark 3 Dual", precio: 350, img :"./img/shark.png"},
 ];
 
 //Guardo los productos en un array
@@ -53,6 +55,7 @@ function mostrarProductos () {
             //meto la funcion que busca el id para cuando la clickee me traiga el producto
             agregarCarrito(producto.id);
             alert ("El producto " + producto.modelo + " se ha agregado al carrito")
+            
         }
 
         // Junto a los elementos dentro del div
@@ -79,9 +82,10 @@ function agregarCarrito (id) {
     //guardo en el storage
     const carritoString = JSON.stringify(carrito)
     localStorage.setItem("carrito", carritoString)
-    
-  
 }
+
+
+
 //creo funcion para mostrar los productos en el html
 function mostrarCarrito(array){
 //    contenedorCarrito.innerHTML=''
