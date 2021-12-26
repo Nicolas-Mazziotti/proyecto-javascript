@@ -67,6 +67,24 @@ body {
     background-color: black;
     color: white; 
 }
+
+//CARRITO
+
+.card-carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-carrito img{
+    width: 50px;
+}
+.card-carrito h2 {
+    font-size: 20px;
+    padding: 2rem;
+}
+.card-carrito p {
+    padding: 1rem;
+}
     
 
 // SECCION CARDS ACCESORIOS
@@ -100,6 +118,23 @@ body {
 .cards-accesorios .card-body{
     font-weight: bold;
 }
+
+
+//BANNER
+
+.banner {
+    background-color: rgb(175, 164, 164);
+    margin: 2rem;
+    .contenido-banner{
+        padding: 2rem;
+        text-align: center;
+            h2{
+                padding-top: 1rem;
+            }
+    }
+}
+
+
 
 
 

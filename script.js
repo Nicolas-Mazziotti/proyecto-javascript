@@ -88,32 +88,18 @@ function agregarCarrito (id) {
 
 //creo funcion para mostrar los productos en el html
 function mostrarCarrito(array){
-//    contenedorCarrito.innerHTML=''
+
 
     array.forEach( producto => {
         //uso jQuery
         $("#contenedor-carrito").append(`
-            <div class="card-carrito">
+            <div class="card-carrito container">
             <img src ="${producto.img}" class="img-carrito"/>
                     <h2 class="hola"> ${producto.modelo} </h2>
                     <p> usd ${producto.precio} </p>
                     <button class="btn btn-dark" id=${producto.id}>Eliminar</button>
 
         `)
-        //lo hago ahora con innerHTML
- /*       let div = document.createElement('div')
-        div.classList.add('card-carrito')
-          div.innerHTML += `
-                
-                    <img src ="${producto.img}" class="img-carrito"/>
-                    <h2 class="hola"> ${producto.modelo} </h2>
-                    <p> usd ${producto.precio} </p>
-                    <button class="btn btn-dark" id=${producto.id}>Eliminar</button>
-                 
-        `
-        contenedorCarrito.appendChild(div)
-*/
-
         // Creo boton eliminar
        let btnEliminar = document.getElementById(`${producto.id}`)
 
