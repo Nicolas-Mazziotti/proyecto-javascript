@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto';
+}
 
 // HERO SECTION
 
@@ -15,7 +18,7 @@
 }
 
 #container-hero-img {
-    background-image: url(/img/hero_section.jpg);
+    background-image: url(../img/hero_section.jpg);
     background-size: cover;
     height: 80vh;
     width: 100%;
@@ -68,8 +71,8 @@
 
 // SECCION CARDS ACCESORIOS
 
-#cards-accesorios{
-    display: flex;
-    flex-direction: row;
-}
 
+
+
+
+ 

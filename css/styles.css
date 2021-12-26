@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto';
+}
+
 #container-hero {
   width: 100%;
   margin: 0;
@@ -13,7 +17,7 @@
 }
 
 #container-hero-img {
-  background-image: url(/img/hero_section.jpg);
+  background-image: url(../img/hero_section.jpg);
   background-size: cover;
   height: 80vh;
   width: 100%;
@@ -73,15 +77,5 @@
   border: none;
   background-color: black;
   color: white;
-}
-
-#cards-accesorios {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 /*# sourceMappingURL=styles.css.map */
