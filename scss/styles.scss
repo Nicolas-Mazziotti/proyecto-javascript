@@ -71,7 +71,35 @@ body {
 
 // SECCION CARDS ACCESORIOS
 
+.contenedor-accesorios-parrafo{
+    justify-content: center;
+    text-align: center;
+    padding-top: 6rem;
+}
 
+.cards-accesorios{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+
+}
+
+.cards-accesorios .card{
+    border-radius: 10px;
+    border: solid 4px gray;
+    box-shadow: 5px 5px 10px 5px white;
+    
+}
+
+.cards-accesorios .card:hover{
+    transform: translateY(-3%);
+}
+
+.cards-accesorios .card-body{
+    font-weight: bold;
+}
 
 
 
