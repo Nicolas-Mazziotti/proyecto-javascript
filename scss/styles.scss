@@ -9,6 +9,14 @@ body {
     font-family: 'Roboto';
 }
 
+//NAV VAR
+
+menu li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+
 // HERO SECTION
 
 #container-hero {

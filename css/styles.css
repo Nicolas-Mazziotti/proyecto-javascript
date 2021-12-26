@@ -10,6 +10,11 @@ body {
   font-family: 'Roboto';
 }
 
+menu li a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
 #container-hero {
   width: 100%;
   margin: 0;
