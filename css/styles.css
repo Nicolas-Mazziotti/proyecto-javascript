@@ -10,9 +10,8 @@ body {
   font-family: 'Roboto';
 }
 
-menu li a:hover {
+.menu li a:hover {
   text-decoration: underline;
-  color: white;
 }
 
 #container-hero {
@@ -32,8 +31,15 @@ menu li a:hover {
 .container-hero-titulo {
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding-top: 8rem;
   font-size: 'Poppins';
+}
+
+.container-hero-saludo {
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
 }
 
 .contenedor-tienda {

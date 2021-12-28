@@ -2,7 +2,7 @@
 
 const URL = "accesorios.json";
 
-$.get(URL, function (respuesta,estado){
+$.getJSON(URL, function (respuesta,estado){
     console.log(respuesta)
     if(estado == "success"){
         let misDatos = respuesta
