@@ -75,6 +75,9 @@ function agregarCarrito (id) {
 
     // pusheo productos al carrito
     carrito.push(productoAgregado);
+    //actualizar cantidad productos
+    cantidadProductos = carrito.length
+    $(".cantidad-productos").html(cantidadProductos)
     //muestro los productos en el carrito
     actualizarCarrito()
     mostrarCarrito(carrito)
@@ -89,7 +92,7 @@ function agregarCarrito (id) {
 //creo funcion para mostrar los productos en el html
 function mostrarCarrito(array){
 
-
+    $("#contenedor-carrito").html("")
     array.forEach( producto => {
         //uso jQuery
         $("#contenedor-carrito").append(`
@@ -107,6 +110,8 @@ function mostrarCarrito(array){
             console.log(producto.id)
             btnEliminar.parentElement.remove()
             carrito = carrito.filter(el => el.id != producto.id)
+            cantidadProductos = carrito
+            $(".cantidad-productos").html(cantidadProductos)
             console.log(carrito)
             actualizarCarrito()
             const carritoString = JSON.stringify(carrito)
@@ -118,12 +123,19 @@ function mostrarCarrito(array){
 
 function actualizarCarrito(){
     totalProductos.innerText = carrito.reduce((acc, el)=> acc + el.precio, 0)
+
 }
+
+let cantidadProductos = 0
 
 function recuperar(){
     let recuperarLS = JSON.parse(localStorage.getItem('carrito'))
+ 
 
     if(recuperarLS){
+        cantidadProductos = recuperarLS.length
+        $(".cantidad-productos").html(cantidadProductos)
+        console.log (cantidadProductos)
         recuperarLS.forEach(el => carrito.push(el))
         mostrarCarrito(recuperarLS)
         actualizarCarrito()

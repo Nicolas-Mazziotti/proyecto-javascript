@@ -3,7 +3,6 @@
 const URL = "accesorios.json";
 
 $.getJSON(URL, function (respuesta,estado){
-    console.log(respuesta)
     if(estado == "success"){
         let misDatos = respuesta
         for( const dato of misDatos)
