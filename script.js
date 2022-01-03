@@ -34,18 +34,25 @@ function mostrarProductos () {
         //Ahora creo las cards de productos
         // Uso el metodo scripting y no el innerhtml
         // 1 Creo un div
+
         const divProductos = document.createElement("div")
         // 2 agrego una clase al div
         divProductos.classList.add("card");
+        divProductos.classList.add("mb-4")
         divProductos.classList.add("col-md-3");
         // 3 agrego una imagen al div class"card"
         const imagen = document.createElement("img");
         imagen.src = producto.img
         imagen.classList.add ("imagen-card")
+        imagen.classList.add ("card-img-top")
         // 4 agrego h2
         const nombreModelo = document.createElement("h2");
         nombreModelo.textContent = producto.modelo
         nombreModelo.classList.add ("nombre-modelo")
+        const precioProducto = document.createElement("p")
+        precioProducto.textContent =  ("usd ") + producto.precio
+
+        
         // 5 agrego un btn
 
         const btnCarrito = document.createElement("button");
@@ -61,8 +68,9 @@ function mostrarProductos () {
         // Junto a los elementos dentro del div
         divProductos.appendChild(imagen)
         divProductos.appendChild(nombreModelo)
+        divProductos.appendChild(precioProducto)
         divProductos.appendChild(btnCarrito)
-
+        
         contenedorTienda.appendChild(divProductos)
     })
 }
@@ -110,6 +118,7 @@ function mostrarCarrito(array){
             console.log(producto.id)
             btnEliminar.parentElement.remove()
             carrito = carrito.filter(el => el.id != producto.id)
+            //resta el numero length cada vez que elimina
             cantidadProductos = carrito
             $(".cantidad-productos").html(cantidadProductos)
             console.log(carrito)
@@ -133,6 +142,7 @@ function recuperar(){
  
 
     if(recuperarLS){
+        //sumar cada producto length agregado al carrito
         cantidadProductos = recuperarLS.length
         $(".cantidad-productos").html(cantidadProductos)
         console.log (cantidadProductos)
@@ -141,6 +151,14 @@ function recuperar(){
         actualizarCarrito()
     }
 }
+
+    function conversion () {
+        productos.forEach((producto) => {
+            let dolar= 200
+            let resultado = 0
+            resultado = producto.precio / dolar
+        })
+    }
 
 recuperar()
 
