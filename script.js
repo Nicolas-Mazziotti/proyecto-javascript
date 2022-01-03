@@ -61,7 +61,6 @@ function mostrarProductos () {
         btnCarrito.onclick = () =>{
             //meto la funcion que busca el id para cuando la clickee me traiga el producto
             agregarCarrito(producto.id);
-            alert ("El producto " + producto.modelo + " se ha agregado al carrito")
             
         }
 
