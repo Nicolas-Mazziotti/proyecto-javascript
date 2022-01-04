@@ -11,6 +11,8 @@ body {
 
 //NAVBAR
 
+ 
+
 .menu li a:hover{
         text-decoration: underline;
     }
@@ -26,12 +28,16 @@ body {
 
 
 
+
+
 // HERO SECTION
 
 #container-hero {
     width: 100%;
-    margin: 0;
+    margin-top: 4rem;
     padding: 0;
+    display: flex;
+    
 }
 
 #container-hero-img {
@@ -40,6 +46,8 @@ body {
     height: 80vh;
     width: 100%;
     margin: 0;
+    padding-top: 3rem;
+
 }
 .container-hero-titulo{
     color: white;
@@ -76,6 +84,11 @@ body {
     box-shadow: 5px 5px 10px 5px;
     width: 300px;
 }
+.card:hover{
+    background-color: rgb(245, 239, 239);
+    color: black;
+    cursor: pointer;
+}
 
 
 .nombre-modelo {
@@ -97,16 +110,16 @@ body {
     justify-content: center;
     align-items: center;
     margin: 1rem;
-    width: 150px;
-    height: 30px;
+    width: 175px;
+    height: 35px;
     border-radius: 10px;
     border: none;
-    background-color: black;
+    background-color: #3483fa;
     color: white; 
 }
 .btn-carrito:hover{
     
-    background-color: gray;
+    background-color: #0b5ad1d5;
 }
 
 
@@ -235,7 +248,3 @@ textarea{
 }
 
 
-.navegacion{
-    height: 15vh;
-}
- 

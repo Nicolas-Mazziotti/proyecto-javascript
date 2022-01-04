@@ -16,6 +16,7 @@ const contenedorTienda = document.querySelector(".contenedor-tienda");
 // const contenedorCarrito = document.querySelector("#contenedor-carrito");
 const carritoHtml = document.querySelector(".carrito");
 const totalProductos = document.getElementById('totalProductos')
+const botonFinalizar  = document.getElementById("finalizar")
 
 
 
@@ -56,7 +57,7 @@ function mostrarProductos () {
         // 5 agrego un btn
 
         const btnCarrito = document.createElement("button");
-        btnCarrito.textContent = "Agregar al Carrito"
+        btnCarrito.textContent = "Agregar al Carrito 🛒"
         btnCarrito.classList.add ("btn-carrito")
         btnCarrito.onclick = () =>{
             //meto la funcion que busca el id para cuando la clickee me traiga el producto
@@ -151,13 +152,14 @@ function recuperar(){
     }
 }
 
-    function conversion () {
-        productos.forEach((producto) => {
-            let dolar= 200
-            let resultado = 0
-            resultado = producto.precio / dolar
-        })
-    }
-
 recuperar()
+
+
+//Creo el boton para finalizar la compra
+botonFinalizar.innerHTML =`<button id="terminar" class="btn btn-primary">Terminar</button>`
+let botonCheckout= document.getElementById("finalizar")
+
+botonCheckout.addEventListener('click', ()=>{
+
+})
 
