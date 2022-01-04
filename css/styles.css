@@ -14,6 +14,15 @@ body {
   text-decoration: underline;
 }
 
+.cantidad-productos {
+  position: relative;
+  top: -50px;
+  left: 20px;
+  font-weight: bold;
+  background-color: #a52828;
+  border-radius: 10px 10px 10px 10px;
+}
+
 #container-hero {
   width: 100%;
   margin: 0;
@@ -70,21 +79,6 @@ body {
   width: 300px;
 }
 
-.card:hover {
-  -webkit-transform: translateY(-3%);
-          transform: translateY(-3%);
-}
-
-.cardcard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
 .nombre-modelo {
   text-align: center;
   font-size: 20px;
@@ -109,11 +103,16 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 1rem;
-  width: 100px;
+  width: 150px;
+  height: 30px;
   border-radius: 10px;
   border: none;
   background-color: black;
   color: white;
+}
+
+.btn-carrito:hover {
+  background-color: gray;
 }
 
 .card-carrito {
@@ -194,5 +193,58 @@ body {
 
 .banner .contenido-banner h2 {
   padding-top: 1rem;
+}
+
+#body-contacto {
+  background-image: url(../img/contacto.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.formulario-contacto {
+  width: 500px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  margin-top: 5rem;
+}
+
+.formulario-contacto h2 {
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 30px;
+}
+
+.formulario-contacto input, textarea {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 1rem;
+  font-size: 17px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 300px;
+  max-width: 100%;
+}
+
+#btnContacto {
+  background-color: #d8d1d1;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#btnContacto:hover {
+  background-color: white;
+}
+
+@media (max-width: 425px) {
+  .formulario-contacto {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

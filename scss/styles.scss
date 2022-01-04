@@ -9,11 +9,20 @@ body {
     font-family: 'Roboto';
 }
 
-//NAV VAR
+//NAVBAR
 
 .menu li a:hover{
         text-decoration: underline;
     }
+
+.cantidad-productos{
+    position: relative;
+    top:-50px;
+    left: 20px;
+    font-weight: bold;
+    background-color: rgb(165, 40, 40);
+    border-radius: 10px 10px 10px 10px;
+}
 
 
 
@@ -67,14 +76,7 @@ body {
     box-shadow: 5px 5px 10px 5px;
     width: 300px;
 }
-.card:hover {
-    transform: translateY(-3%);
-}
 
-.cardcard{
-    display: flex;
-    flex-direction: row;
-}
 
 .nombre-modelo {
     text-align: center;
@@ -95,11 +97,16 @@ body {
     justify-content: center;
     align-items: center;
     margin: 1rem;
-    width: 100px;
+    width: 150px;
+    height: 30px;
     border-radius: 10px;
     border: none;
     background-color: black;
     color: white; 
+}
+.btn-carrito:hover{
+    
+    background-color: gray;
 }
 
 
@@ -171,7 +178,60 @@ body {
 }
 
 
+//formulario de contacto
+
+#body-contacto{
+    background-image:url(../img/contacto.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+
+}
+
+.formulario-contacto{
+    width: 500px;
+    margin: auto;
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px 20px;
+    margin-top: 5rem;
+    h2{
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        font-size: 30px;
+    }
+}
+
+.formulario-contacto input,textarea {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 1rem;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 300px;
+    max-width: 100%;
+}
+
+#btnContacto{
+    background-color: rgb(216, 209, 209);
+    font-weight: bold;
+    font-size: 20px;   
+}
+#btnContacto:hover{
+    background-color: white;
+}
 
 
+//MEDIA QUERYS
+
+@media (max-width: 425px){
+    .formulario-contacto{
+        width: 100%;
+    }
+}
 
  

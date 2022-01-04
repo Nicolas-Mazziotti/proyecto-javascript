@@ -56,7 +56,7 @@ function mostrarProductos () {
         // 5 agrego un btn
 
         const btnCarrito = document.createElement("button");
-        btnCarrito.textContent = "Carrito"
+        btnCarrito.textContent = "Agregar al Carrito"
         btnCarrito.classList.add ("btn-carrito")
         btnCarrito.onclick = () =>{
             //meto la funcion que busca el id para cuando la clickee me traiga el producto
