@@ -61,6 +61,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -155,6 +159,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  margin-top: 4rem;
   padding-top: 4rem;
   padding-bottom: 3rem;
 }

@@ -69,6 +69,7 @@ body {
 //TIENDA
 .contenedor-tienda {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -152,6 +153,7 @@ body {
 .contenedor-accesorios-parrafo{
     justify-content: center;
     text-align: center;
+    margin-top: 4rem;
     padding-top: 4rem;
     padding-bottom: 3rem;
     h2{

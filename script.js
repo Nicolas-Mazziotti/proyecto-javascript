@@ -126,8 +126,7 @@ function mostrarCarrito(array){
             const carritoString = JSON.stringify(carrito)
             localStorage.setItem("carrito", carritoString)
         })
-    })
-    
+    })  
 }
 
 function actualizarCarrito(){
