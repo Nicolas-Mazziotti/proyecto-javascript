@@ -1,6 +1,8 @@
 [
     {"id":1, "modelo": "Xiaomi Mi Band Smartwatch", "precio": 350, "img" :"./img/smart-watch.png"},
-    {"id":1, "modelo": "Xiaomi Redmi Airdots", "precio": 350, "img" :"./img/airpods.png"},
-    {"id":1, "modelo": "Xiaomi Mi Robot Vacuum", "precio": 350, "img" :"./img/mi-robot.png"},
-    {"id":1, "modelo": "Xiaomi Scooter Electrico", "precio": 350, "img" :"./img/scooter.png"}
+    {"id":2, "modelo": "Xiaomi Redmi Airdots", "precio": 350, "img" :"./img/airpods.png"},
+    {"id":3, "modelo": "Xiaomi Mi Robot Vacuum", "precio": 350, "img" :"./img/mi-robot.png"},
+    {"id":4, "modelo": "Xiaomi Scooter Electrico", "precio": 350, "img" :"./img/scooter.png"},
+    {"id":5, "modelo": "Camara de Seguridad 360°", "precio": 350, "img" :"./img/camara.png"},
+    {"id":6, "modelo": "Xiaomi Mi TV Stick Android", "precio": 350, "img" :"./img/tv.png"}
 ]

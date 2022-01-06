@@ -5,6 +5,7 @@ const productos = [
     {id:4, modelo: "Xiaomi RedMi Note 9T", precio: 350, img :"./img/redmi-note9t.png"},
     {id:5, modelo: "Xiaomi RedMi Note 10S Dual", precio: 220, img :"./img/redmi-note10s.png"},
     {id:6, modelo: "Xiaomi Black Shark 3 Dual", precio: 350, img :"./img/shark.png"},
+    {id:7, modelo: "Xiaomi Poco X3 Dual", precio: 220, img :"./img/pocoX3.png"},
 ];
 
 //Guardo los productos en un array
@@ -12,8 +13,6 @@ let carrito = [];
 
 //Sincronizo a la class del html
 const contenedorTienda = document.querySelector(".contenedor-tienda");
-//saco porque use jQuery en #contenedor-carrito
-// const contenedorCarrito = document.querySelector("#contenedor-carrito");
 const carritoHtml = document.querySelector(".carrito");
 const totalProductos = document.getElementById('totalProductos')
 const botonFinalizar  = document.getElementById("finalizar")
@@ -29,13 +28,13 @@ $(document).ready(function(){
     mostrarProductos()
 })
 
+//Creo funcion para mostrar productos en el html
 function mostrarProductos () {
     productos.forEach ((producto) => {
 
         //Ahora creo las cards de productos
         // Uso el metodo scripting y no el innerhtml
         // 1 Creo un div
-
         const divProductos = document.createElement("div")
         // 2 agrego una clase al div
         divProductos.classList.add("card");
@@ -51,20 +50,16 @@ function mostrarProductos () {
         nombreModelo.textContent = producto.modelo
         nombreModelo.classList.add ("nombre-modelo")
         const precioProducto = document.createElement("p")
-        precioProducto.textContent =  ("usd ") + producto.precio
-
+        precioProducto.textContent =  ("$USD: ") + producto.precio
         
         // 5 agrego un btn
-
         const btnCarrito = document.createElement("button");
         btnCarrito.textContent = "Agregar al Carrito 🛒"
         btnCarrito.classList.add ("btn-carrito")
         btnCarrito.onclick = () =>{
             //meto la funcion que busca el id para cuando la clickee me traiga el producto
-            agregarCarrito(producto.id);
-            
+            agregarCarrito(producto.id);           
         }
-
         // Junto a los elementos dentro del div
         divProductos.appendChild(imagen)
         divProductos.appendChild(nombreModelo)
@@ -74,13 +69,11 @@ function mostrarProductos () {
         contenedorTienda.appendChild(divProductos)
     })
 }
-
-//creo funcion para buscar en el array el id
+//Creo funcion para buscar en el array el id
 function agregarCarrito (id) {
     const productoAgregado = productos.find (producto => {
         return producto.id === id;
     });
-
     // pusheo productos al carrito
     carrito.push(productoAgregado);
     //actualizar cantidad productos
@@ -97,23 +90,20 @@ function agregarCarrito (id) {
 
 
 
-//creo funcion para mostrar los productos en el html
+//creo funcion para mostrar los productos en el html (modal carrito)
 function mostrarCarrito(array){
 
     $("#contenedor-carrito").html("")
     array.forEach( producto => {
-        //uso jQuery
         $("#contenedor-carrito").append(`
             <div class="card-carrito container">
             <img src ="${producto.img}" class="img-carrito"/>
                     <h2 class="hola"> ${producto.modelo} </h2>
                     <p> usd ${producto.precio} </p>
                     <button class="btn btn-dark" id=${producto.id}>Eliminar</button>
-
         `)
         // Creo boton eliminar
        let btnEliminar = document.getElementById(`${producto.id}`)
-
             btnEliminar.addEventListener('click', ()=>{
             console.log(producto.id)
             btnEliminar.parentElement.remove()
@@ -128,7 +118,6 @@ function mostrarCarrito(array){
         })
     })  
 }
-
 function actualizarCarrito(){
     totalProductos.innerText = carrito.reduce((acc, el)=> acc + el.precio, 0)
 
@@ -150,7 +139,6 @@ function recuperar(){
         actualizarCarrito()
     }
 }
-
 recuperar()
 
 
