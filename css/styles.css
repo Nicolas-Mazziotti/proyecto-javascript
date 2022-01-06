@@ -155,7 +155,16 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  padding-top: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.contenedor-accesorios-parrafo h2 {
+  font-size: 40px;
+}
+
+.contenedor-accesorios-parrafo h3 {
+  font-size: 20px;
 }
 
 .cards-accesorios {
@@ -256,6 +265,29 @@ textarea {
 
 #btnContacto:hover {
   background-color: #0b5ad1d5;
+}
+
+.footer {
+  background-color: #eeebeb;
+}
+
+.footer-redes {
+  text-align: center;
+}
+
+.footer-redes img {
+  padding: 1rem;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding: 2rem;
+  color: black;
+}
+
+.footer-copyright h3 {
+  font-size: 15px;
+  font-weight: bold;
 }
 
 @media (max-width: 425px) {

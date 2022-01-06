@@ -145,10 +145,21 @@ body {
 
 // SECCION CARDS ACCESORIOS
 
+
+
+
+
 .contenedor-accesorios-parrafo{
     justify-content: center;
     text-align: center;
-    padding-top: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    h2{
+        font-size: 40px;
+    }
+    h3{
+        font-size: 20px;
+    }
 }
 
 .cards-accesorios{
@@ -244,6 +255,29 @@ textarea{
     background-color: #0b5ad1d5;
 }
 
+//footer
+
+.footer{
+    background-color: rgb(238, 235, 235);
+
+}
+.footer-redes {
+
+    text-align: center;
+    img{
+        padding: 1rem;
+    }
+}
+.footer-copyright{
+    text-align: center;
+    padding: 2rem;
+    color: black;
+    
+    h3{
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
 
 //MEDIA QUERYS
 

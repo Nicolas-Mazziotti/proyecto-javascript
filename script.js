@@ -157,9 +157,17 @@ recuperar()
 
 //Creo el boton para finalizar la compra
 botonFinalizar.innerHTML =`<button id="terminar" class="btn btn-primary">Terminar</button>`
-let botonCheckout= document.getElementById("finalizar")
+let botonCheckout= document.getElementById("terminar")
 
 botonCheckout.addEventListener('click', ()=>{
-
+    $.post("https://jsonplaceholder.typicode.com/posts", JSON.stringify(carrito), function (respuesta, estado){
+        if(estado){
+            botonFinalizar.style.display="none"
+            $("#contenedor-carrito").html(`Su compra ha sido procesada`)
+            carrito=[]
+            localStorage.clear()
+            actualizarCarrito()
+        }
+    })
 })
 
